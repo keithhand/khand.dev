@@ -17,14 +17,14 @@
     <meta property="og:url" content="http://hand.technology/">
     <meta property="og:title" content="Keith Hand - Developer">
     <meta property="og:description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
-    <meta property="og:image" content="img/thumbnail.jpg">
+    <meta property="og:image" content="http://hand.technology/img/thumbnail.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="http://hand.technology/">
     <meta property="twitter:title" content="Keith Hand - Developer">
     <meta property="twitter:description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
-    <meta property="twitter:image" content="img/thumbnail.jpg">
+    <meta property="twitter:image" content="http://hand.technology/img/thumbnail.jpg">
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
