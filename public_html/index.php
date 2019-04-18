@@ -39,7 +39,7 @@
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#services" onclick=$("#menu-close").click();>Services</a>
+                <a href="#services" onclick=$("#menu-close").click();>Skills</a>
             </li>
             <li>
                 <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
@@ -82,7 +82,7 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>My Knowledge Base</h2>
                     <hr class="small">
-                    <!-- row 1 -->
+                    <!-- row 1 (Webpages) -->
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
@@ -91,7 +91,55 @@
                                 <i class="fab fa-html5 fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>HTML/CSS/Javascript</strong>
+                                    <strong>HTML</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-php fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>PHP</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-js-square fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>JavaScript</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-css3-alt fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>CSS</strong>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- row 2 (Languages) -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-laptop-code fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>C++</strong>
                                 </h4>
                             </div>
                         </div>
@@ -130,16 +178,16 @@
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <!-- row 2 -->
+                    <!-- row 3 (Programs) -->
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linux fa-stack-1x text-primary"></i>
+                                <i class="fab fa-git fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Linux</strong>
+                                    <strong>Git</strong>
                                 </h4>
                             </div>
                         </div>
@@ -158,10 +206,10 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-git fa-stack-1x text-primary"></i>
+                                <i class="fas fa-database fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Git</strong>
+                                    <strong>SQL</strong>
                                 </h4>
                             </div>
                         </div>
@@ -169,10 +217,58 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="far fa-file-alt fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>LaTeX</strong>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- row 4 (Operating System) -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-terminal fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Sh</strong>
+                                    <strong>sh</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linux fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Linux</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-windows fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Windows</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-apple fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>macOS</strong>
                                 </h4>
                             </div>
                         </div>
