@@ -228,7 +228,7 @@
                     </h4>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (405) 574-5813</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:contact@keithhand.xyz">contact@keithhand.xyz</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:rkeithhand@gmail.com">rkeithhand@gmail.com</a>
                         </li>
                     </ul>
                     <br>
