@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Hi! My name is Keith and I like to write code.</h2>
-                    <p class="lead">I am a novice at the moment, but I enjoy taking on any project, big or small. Whether you need a personal webpage just like this one or you have the next big AAA iOS title, I want to be the guy to help make your dreams become a reality.</p>
+                    <p class="lead">I enjoy taking on any project, big or small. Whether you need a personal webpage just like this one or you have the next big AAA iOS title, I want to be the guy to help make your dreams become a reality.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -148,13 +148,13 @@
         <!-- /.container -->
     </section>
 
-    <!-- Callout -->
+    <!-- Callout 
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>"Man, this Keith guy sure is a class act"</h1>
             <h3>--Anonymous</h3>
         </div>
-    </aside>
+    </aside>-->
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
@@ -215,11 +215,7 @@
 
     <!-- Map -->
     <section class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d392565.2037547804!2d-105.13529650012137!3d39.76400211690761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1473320649954"></iframe>
-        <br />
-        <small>
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d392565.2037547804!2d-105.13529650012137!3d39.76400211690761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1473320649954"></a>
-        </small>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494793.76199040335!2d-97.71640447924517!3d35.4437818739835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ad8a547ef8d281%3A0x33a21274d14f3a9d!2sOklahoma+City%2C+OK!5e0!3m2!1sen!2sus!4v1555551250400!5m2!1sen!2sus"></iframe>
         </iframe>
     </section>
 
