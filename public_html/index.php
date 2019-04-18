@@ -6,9 +6,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
-    <meta name="author" content="keith.hand">
+
     <title>Keith Hand - Developer</title>
+    <meta name="title" content="Keith Hand - Developer">
+    <meta name="author" content="keith.hand">
+    <meta name="description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://hand.technology/">
+    <meta property="og:title" content="Keith Hand - Developer">
+    <meta property="og:description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
+    <meta property="og:image" content="img/thumbnail.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://hand.technology/">
+    <meta property="twitter:title" content="Keith Hand - Developer">
+    <meta property="twitter:description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
+    <meta property="twitter:image" content="img/thumbnail.jpg">
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
