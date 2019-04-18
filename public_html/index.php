@@ -204,28 +204,28 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="http://www.keithhand.xyz">
+                                <a href="http://github.com/keithhand/personal-portal">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="http://s.codepen.io/khand3/debug/oLPEGp">
+                                <a href="http://github.com/keithhand/ant-facts">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="http://s.codepen.io/khand3/debug/YWZmYe">
+                                <a href="http://github.com/keithhand/se-project">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a href="https://github.com/keithhand/scripts/blob/master/ucossh">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
                                 </a>
                             </div>
