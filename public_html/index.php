@@ -57,6 +57,7 @@
             <h3>Software Developer</h3>
             <br>
             <a href="#about" class="btn btn-light btn-lg">Who am I?</a>
+            <a href="docs/cv.pdf" class="btn btn-light btn-lg">View my resume</a>
         </div>
     </header>
 
