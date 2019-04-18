@@ -373,7 +373,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; <?=date("Y")?> keithhand.dev</p>
+                    <p class="text-muted">Copyright &copy; <?=date("Y")?> <?=$_SERVER['HTTP_HOST']?></p>
                 </div>
             </div>
         </div>
