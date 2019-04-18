@@ -54,7 +54,7 @@
     <header id="top" class="header bg-primary">
         <div class="text-vertical-center">
             <h1>Keith Hand</h1>
-            <h3>Software Engineer &amp; Web Developer</h3>
+            <h3>Software Developer</h3>
             <br>
             <a href="#about" class="btn btn-light btn-lg">Who am I?</a>
         </div>
