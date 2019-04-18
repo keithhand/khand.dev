@@ -316,32 +316,40 @@
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="http://github.com/keithhand/personal-portal">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
+                            <figure class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                <figcaption class="portfolio-links">
+                                    <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
+                                    <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="http://github.com/keithhand/ant-facts">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
+                            <figure class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                <figcaption class="portfolio-links">
+                                    <span class="disabled"><i class="fas fa-globe fa-5x" target="_blank"></i></span>
+                                    <a href="http://github.com/keithhand/ant-facts" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="http://github.com/keithhand/se-project">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
+                            <figure class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                <figcaption class="portfolio-links">
+                                    <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
+                                    <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://github.com/keithhand/realm-tracker-extended">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
+                            <figure class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                <figcaption class="portfolio-links">
+                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/realm-tracker-extended/" target="_blank"><i class="fas fa-globe fa-5x"></i></a>
+                                    <a href="http://github.com/keithhand/realm-tracker-extended" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
