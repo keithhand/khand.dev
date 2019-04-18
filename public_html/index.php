@@ -17,7 +17,7 @@
     <meta property="og:url" content="http://hand.technology/">
     <meta property="og:title" content="Keith Hand - Developer">
     <meta property="og:description" content="A personal webpage for Keith Hand, asoftware engineer and web developer based out of Oklahoma City, Oklahoma.">
-    <meta property="og:image" content="http://hand.technology/img/thumbnail.jpg">
+    <meta property="og:image" content="/img/thumbnail.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Hi! My name is Keith and I like to write code.</h2>
+                    <h2>Hello, my name is Keith, and I like to write code!</h2>
                     <p class="lead">I enjoy taking on any project, big or small. Whether you need a personal webpage you have the next big AAA iOS title, or you need someone to manage your webserver, I want to be the guy to help make your dreams become a reality.</p>
                 </div>
             </div>
