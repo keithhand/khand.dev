@@ -179,7 +179,7 @@
                                 <i class="fa fa-terminal fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Bash</strong>
+                                    <strong>Sh</strong>
                                 </h4>
                             </div>
                         </div>
