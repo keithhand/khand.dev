@@ -17,7 +17,7 @@
     <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,7 +94,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-html5 fa-stack-1x text-primary"></i>
+                                <i class="fab fa-html5 fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>HTML/CSS/Javascript</strong>
@@ -118,7 +118,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-diamond fa-stack-1x text-primary"></i>
+                                <i class="far fa-gem fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Ruby</strong>
@@ -238,10 +238,10 @@
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="http://www.github.com/khand3"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                            <a href="http://www.github.com/khand3"><i class="fab fa-github fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="http://www.linkedin.com/khand3"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                            <a href="http://www.linkedin.com/khand3"><i class="fab fa-linkedin-in fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
