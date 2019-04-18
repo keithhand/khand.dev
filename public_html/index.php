@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Hi! My name is Keith and I like to write code.</h2>
-                    <p class="lead">I enjoy taking on any project, big or small. Whether you need a personal webpage just like this one or you have the next big AAA iOS title, I want to be the guy to help make your dreams become a reality.</p>
+                    <p class="lead">I enjoy taking on any project, big or small. Whether you need a personal webpagem you have the next big AAA iOS title, or you need someone to manage your webserver, I want to be the guy to help make your dreams become a reality.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -89,6 +89,7 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>My Knowledge Base</h2>
                     <hr class="small">
+                    <!-- row 1 -->
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
@@ -105,7 +106,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-terminal fa-stack-1x text-primary"></i>
+                                <i class="fab fa-python fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Python</strong>
@@ -127,10 +128,58 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-code fa-stack-1x text-primary"></i>
+                                <i class="fab fa-java fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Java</strong>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <!-- row 2 -->
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linux fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Linux</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-docker fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Docker</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-git fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Git</strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-terminal fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Bash</strong>
                                 </h4>
                             </div>
                         </div>
