@@ -361,8 +361,8 @@
                     <h4><strong>Keith Hand</strong>
                     </h4>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (405) 574-5813</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:rkeithhand@gmail.com">rkeithhand@gmail.com</a>
+                        <li><i class="fa fa-phone fa-fw small-icons"></i> (405) 574-5813</li>
+                        <li><i class="fas fa-envelope fa-fw small-icons"></i> <a href="mailto:rkeithhand@gmail.com">rkeithhand@gmail.com</a>
                         </li>
                     </ul>
                     <br>
@@ -372,7 +372,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; <?=date("Y")?> keithhand.xyz</p>
+                    <p class="text-muted">Copyright &copy; <?=date("Y")?> keithhand.dev</p>
                 </div>
             </div>
         </div>
@@ -397,33 +397,6 @@
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-
-
-
-
-    // Scrolls to the selected menu item on the page
-    // $(function() {
-    //     $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-    //         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-    //             var target = $(this.hash);
-    //             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //             if (target.length) {
-    //                 $('html,body').animate({
-    //                     scrollTop: target.offset().top
-    //                 }, 1000);
-    //                 return false;
-    //             }
-    //         }
-    //     });
-    // });
-
-
-
-
-
-
-
-
     //#to-top button appears after scrolling
     var fixed = false;
     $(document).scroll(function() {
