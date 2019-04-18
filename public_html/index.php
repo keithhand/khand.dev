@@ -234,10 +234,7 @@
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="http://www.github.com/khand3"><i class="fab fa-github fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/khand3"><i class="fab fa-linkedin-in fa-fw fa-3x"></i></a>
+                            <a href="http://www.github.com/keithhand"><i class="fab fa-github fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
