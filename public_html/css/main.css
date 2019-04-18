@@ -21,7 +21,13 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
+    -webkit-text-stroke: .02em black;
 }
+
+.text-vertical-center h3 {
+    -webkit-text-stroke: .03em black;
+}
+
 
 /* Custom Button Styles */
 
