@@ -241,7 +241,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; 2016 keithhand.xyz</p>
+                    <p class="text-muted">Copyright &copy; <?=date("Y")?> keithhand.xyz</p>
                 </div>
             </div>
         </div>
