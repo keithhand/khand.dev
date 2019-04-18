@@ -99,7 +99,6 @@
                                 <h4>
                                     <strong>HTML/CSS/Javascript</strong>
                                 </h4>
-                                <p>The bread and butter of the interwebs. Very basic skills to have when dealing with web development so naturally something I feel fairly confident with.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -111,7 +110,6 @@
                                 <h4>
                                     <strong>Python</strong>
                                 </h4>
-                                <p>One of my personal favorite languages. Very good for mock-up designs or even full applications. Definitely my language of choice when it comes to general programming.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -123,7 +121,6 @@
                                 <h4>
                                     <strong>Ruby</strong>
                                 </h4>
-                                <p>Still a bit of a novice but bearing a resemblance to python has gotten me to grow quite accustomed to it. Any kind of back end web development that you might need could see the likes of Ruby.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -135,7 +132,6 @@
                                 <h4>
                                     <strong>Java</strong>
                                 </h4>
-                                <p>Honestly not my most knowledgable language but I did take a course in college. If you need an android app or something that requires Java I am more than happy to brush up on my skills.</p>
                             </div>
                         </div>
                     </div>
