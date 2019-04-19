@@ -202,66 +202,94 @@ hr.small {
 
 .portfolio-item {
     position: relative;
-    transition: transform 0.2s;
 }
 
 .img-portfolio {
+    transition: transform 0.2s;
     margin: 0 auto;
 }
 
-.portfolio-item:hover {
-    transform: scale(1.2);
-}
-
 .portfolio-item:hover .img-portfolio {
+    transform: scale(1.2);
     opacity: 0.8;
 }
 
-.portfolio-item:hover .portfolio-links {
+.portfolio-item:hover h1,
+.portfolio-item:hover h5,
+.portfolio-item:hover p {
+    transform: translateY(0);
+}
+
+.portfolio-item:hover .portfolio-mask {
     opacity: 1;
 }
 
-.portfolio-links {
+.portfolio-mask {
     opacity: 0;
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
     transition: .2s ease-in-out;
+    background-color: #637383CC;
+    width: 100%;
+    height: 100%;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
-.portfolio-links * {
+.portfolio-mask * {
     opacity: 1;
     margin-left: .2em;
     margin-right: .2em;
 }
 
-.portfolio-links a {
+.portfolio-mask a {
     color: #000;
 }
 
-.portfolio-links .disabled {
+.portfolio-mask .disabled {
     cursor: not-allowed;
     color: #00000050;
 }
 
-.portfolio-links h1,
-.portfolio-links h5,
-.portfolio-links p {
+.portfolio-mask h1,
+.portfolio-mask h5,
+.portfolio-mask p {
+    transition: .2s ease-in-out .1s;
     color: #000;
+    margin-bottom: 12px;
 }
 
-.portfolio-links h1 {
-    font-size: 18px;
+.portfolio-mask h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    transform: translatey(-100px);
 }
 
-.portfolio-links p {
+.portfolio-mask h5,
+.portfolio-mask p,
+.portfolio-mask a,
+.portfolio-mask span {
+    transform: translatey(200px);
+}
+
+.portfolio-mask p {
     font-size: 12px;
 }
 
 .portfolio-wrapper {
     margin-bottom: 30px;
     overflow: hidden;
+}
+
+.portfolio-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 /* Call to Action */
