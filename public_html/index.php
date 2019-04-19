@@ -320,8 +320,11 @@
                                 <div class="portfolio-item">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                     <div class="portfolio-links">
-                                        <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
-                                        <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                        <h1>command.here()</h3>
+                                        <h5>A web portal to mimic a shell environment in any browser.</h5>
+                                        <p>Written in PHP.</p>
+                                        <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
+                                        <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -331,8 +334,11 @@
                                 <div class="portfolio-item">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
                                     <div class="portfolio-links">
-                                        <span class="disabled"><i class="fas fa-globe fa-5x" target="_blank"></i></span>
-                                        <a href="http://github.com/keithhand/ant-facts" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                        <h1>Ant Facts</h3>
+                                        <h5>A slack bot that give random facts about ants.</h5>
+                                        <p>Written in Python.</p>
+                                        <span class="disabled"><i class="fas fa-globe fa-3x" target="_blank"></i></span>
+                                        <a href="http://github.com/keithhand/ant-facts" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -342,8 +348,11 @@
                                 <div class="portfolio-item">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
                                     <div class="portfolio-links">
-                                        <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
-                                        <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                        <h1>UCO Maps</h3>
+                                        <h5>A web application to determine directions between building at the University of Central Oklahoma.</h5>
+                                        <p>Written in Ruby.</p>
+                                        <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
+                                        <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -353,8 +362,11 @@
                                 <div class="portfolio-item">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
                                     <div class="portfolio-links">
-                                        <a href="https://addons.mozilla.org/en-US/firefox/addon/realm-tracker-extended/" target="_blank"><i class="fas fa-globe fa-5x"></i></a>
-                                        <a href="http://github.com/keithhand/realm-tracker-extended" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                        <h1>Realm Tracker Extended</h3>
+                                        <h5>A firefox extension that gives added functionality to realmtracker.com.</h5>
+                                        <p>Written in JavaScript.</p>
+                                        <a href="https://addons.mozilla.org/en-US/firefox/addon/realm-tracker-extended/" target="_blank"><i class="fas fa-globe fa-3x"></i></a>
+                                        <a href="http://github.com/keithhand/realm-tracker-extended" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                     </div>
                                 </div>
                             </div>
