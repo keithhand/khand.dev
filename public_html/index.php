@@ -28,13 +28,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet">
-
+    
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
 
 </head>
 
@@ -316,40 +316,48 @@
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
-                            <figure class="portfolio-item">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                <figcaption class="portfolio-links">
-                                    <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
-                                    <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-5x"></i></a>
-                                </figcaption>
-                            </figure>
+                            <div class=portfolio-wrapper>
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    <div class="portfolio-links">
+                                        <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
+                                        <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <figure class="portfolio-item">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                <figcaption class="portfolio-links">
-                                    <span class="disabled"><i class="fas fa-globe fa-5x" target="_blank"></i></span>
-                                    <a href="http://github.com/keithhand/ant-facts" target="_blank"><i class="fab fa-github fa-5x"></i></a>
-                                </figcaption>
-                            </figure>
+                            <div class=portfolio-wrapper>
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                    <div class="portfolio-links">
+                                        <span class="disabled"><i class="fas fa-globe fa-5x" target="_blank"></i></span>
+                                        <a href="http://github.com/keithhand/ant-facts" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <figure class="portfolio-item">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                <figcaption class="portfolio-links">
-                                    <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
-                                    <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-5x"></i></a>
-                                </figcaption>
-                            </figure>
+                            <div class=portfolio-wrapper>
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <div class="portfolio-links">
+                                        <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-5x"></i></span>
+                                        <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <figure class="portfolio-item">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                <figcaption class="portfolio-links">
-                                    <a href="https://addons.mozilla.org/en-US/firefox/addon/realm-tracker-extended/" target="_blank"><i class="fas fa-globe fa-5x"></i></a>
-                                    <a href="http://github.com/keithhand/realm-tracker-extended" target="_blank"><i class="fab fa-github fa-5x"></i></a>
-                                </figcaption>
-                            </figure>
+                            <div class=portfolio-wrapper>
+                                <div class="portfolio-item">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                    <div class="portfolio-links">
+                                        <a href="https://addons.mozilla.org/en-US/firefox/addon/realm-tracker-extended/" target="_blank"><i class="fas fa-globe fa-5x"></i></a>
+                                        <a href="http://github.com/keithhand/realm-tracker-extended" target="_blank"><i class="fab fa-github fa-5x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
