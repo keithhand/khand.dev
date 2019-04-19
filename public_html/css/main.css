@@ -250,7 +250,7 @@ hr.small {
 
 .portfolio-mask .disabled {
     cursor: not-allowed;
-    color: #00000050;
+    color: rgba(0, 0, 0, 0.314);
 }
 
 .portfolio-mask h1,
