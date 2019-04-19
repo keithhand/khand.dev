@@ -231,7 +231,7 @@ hr.small {
     left: 50%;
     transform: translate(-50%, 50%);
     transition: .2s ease-in-out;
-    background-color: #637383CC;
+    background-color: rgba(98, 114, 130, 0.8);
     width: 100%;
     height: 100%;
     margin-bottom: auto;
