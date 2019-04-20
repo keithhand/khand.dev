@@ -3,8 +3,6 @@ services:
   php:
     container_name: personal-webpage-php
     build: './php/'
-    networks:
-      - backend
     volumes:
       - ./public_html/:/var/www/html/
     restart: always
@@ -13,14 +11,14 @@ services:
     build: './apache/'
     depends_on:
       - php
-    networks:
-      - frontend
-      - backend
-    ports:
-      - "80:80"
     volumes:
       - ./public_html/:/var/www/html/
+    environment:
+      - VIRTUAL_HOST=keithhand.dev, hand.technology
+      - LETSENCRYPT_HOST=keithhand.dev, hand.technology
+      - LETSENCRYPT_EMAIL=keith@hand.technology
     restart: always
 networks:
-  frontend:
-  backend:
+  default:
+    external:
+      name: webproxy
