@@ -180,6 +180,19 @@ hr.small {
     margin-bottom: 30px;
 }
 
+/* Mobile friendly */
+@media screen and (max-width: 576px) {
+    .skill-item {
+        font-size: .5em;
+        float: left;
+    }
+
+    .skills  .col-sm-3 {
+        display: inline-block;
+        padding: 0 1pxc;
+    }
+}
+
 /* Callout */
 
 .callout {

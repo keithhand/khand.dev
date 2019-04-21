@@ -103,9 +103,9 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-html5 fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-html5 fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>HTML</strong>
@@ -114,9 +114,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-php fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-php fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>PHP</strong>
@@ -125,9 +125,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-js-square fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-js-square fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>JavaScript</strong>
@@ -136,9 +136,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-css3-alt fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-css3-alt fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>CSS</strong>
@@ -151,9 +151,9 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fas fa-laptop-code fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-laptop-code fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>C++</strong>
@@ -162,9 +162,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-python fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-python fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Python</strong>
@@ -173,9 +173,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="far fa-gem fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="far fa-gem fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Ruby</strong>
@@ -184,9 +184,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-java fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-java fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Java</strong>
@@ -199,9 +199,9 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-git fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-git fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Git</strong>
@@ -210,9 +210,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-docker fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-docker fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Docker</strong>
@@ -221,9 +221,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fas fa-database fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-database fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>SQL</strong>
@@ -232,9 +232,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="far fa-file-alt fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="far fa-file-alt fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>LaTeX</strong>
@@ -247,9 +247,9 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fa fa-terminal fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-terminal fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>sh</strong>
@@ -258,9 +258,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-linux fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linux fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Linux</strong>
@@ -269,9 +269,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-windows fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-windows fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Windows</strong>
@@ -280,9 +280,9 @@
                         </div>
                         <div class="col-sm-3">
                             <div class="skill-item">
-                                <span class="fa-stack fa-4x hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
-                                <i class="fab fa-apple fa-stack-1x text-primary hidden-xs"></i>
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-apple fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>macOS</strong>
