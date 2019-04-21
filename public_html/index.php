@@ -55,7 +55,7 @@
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#services" onclick=$("#menu-close").click();>Skills</a>
+                <a href="#skills" onclick=$("#menu-close").click();>Skills</a>
             </li>
             <li>
                 <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
@@ -91,9 +91,9 @@
         <!-- /.container -->
     </section>
 
-    <!-- Services -->
+    <!-- Skills -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+    <section id="skills" class="skills bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
@@ -102,7 +102,7 @@
                     <!-- row 1 (Webpages) -->
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-html5 fa-stack-1x text-primary hidden-xs"></i>
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-php fa-stack-1x text-primary hidden-xs"></i>
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-js-square fa-stack-1x text-primary hidden-xs"></i>
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-css3-alt fa-stack-1x text-primary hidden-xs"></i>
@@ -150,7 +150,7 @@
                     <!-- row 2 (Languages) -->
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fas fa-laptop-code fa-stack-1x text-primary hidden-xs"></i>
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-python fa-stack-1x text-primary hidden-xs"></i>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="far fa-gem fa-stack-1x text-primary hidden-xs"></i>
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-java fa-stack-1x text-primary hidden-xs"></i>
@@ -198,7 +198,7 @@
                     <!-- row 3 (Programs) -->
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-git fa-stack-1x text-primary hidden-xs"></i>
@@ -209,7 +209,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-docker fa-stack-1x text-primary hidden-xs"></i>
@@ -220,7 +220,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fas fa-database fa-stack-1x text-primary hidden-xs"></i>
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="far fa-file-alt fa-stack-1x text-primary hidden-xs"></i>
@@ -246,7 +246,7 @@
                     <!-- row 4 (Operating System) -->
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fa fa-terminal fa-stack-1x text-primary hidden-xs"></i>
@@ -257,7 +257,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-linux fa-stack-1x text-primary hidden-xs"></i>
@@ -268,7 +268,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-windows fa-stack-1x text-primary hidden-xs"></i>
@@ -279,7 +279,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="service-item">
+                            <div class="skill-item">
                                 <span class="fa-stack fa-4x hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x hidden-xs"></i>
                                 <i class="fab fa-apple fa-stack-1x text-primary hidden-xs"></i>
