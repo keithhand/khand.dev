@@ -15,7 +15,7 @@ services:
       - ./public_html/:/var/www/html/
     environment:
       - VIRTUAL_HOST=keithhand.dev
-      - LETSENCRYPT_HOST=keithhand.dev
+      - LETSENCRYPT_HOST=keithhand.dev, www.keithhand.dev
       - LETSENCRYPT_EMAIL=keith@hand.technology
     restart: always
 networks:
