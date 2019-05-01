@@ -356,7 +356,7 @@
                                             <h1>UCO Maps</h3>
                                             <h5>A web application to determine directions between building at the University of Central Oklahoma.</h5>
                                             <p>Written in Ruby</p>
-                                            <span class="disabled" href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
+                                            <a href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
                                             <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                         </div>
                                     </div>
