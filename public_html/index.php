@@ -318,14 +318,14 @@
                         <div class="col-md-6">
                             <div class=portfolio-wrapper>
                                 <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
                                     <div class="portfolio-mask">
                                         <div class="portfolio-text">
-                                            <h1>command.here()</h3>
-                                            <h5>A web portal to mimic a shell environment in any browser.</h5>
-                                            <p>Written in PHP</p>
-                                            <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
-                                            <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                                            <h1>UCO Maps</h3>
+                                            <h5>A web application to determine directions between building at the University of Central Oklahoma.</h5>
+                                            <p>Written in Ruby</p>
+                                            <a href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
+                                            <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -350,14 +350,14 @@
                         <div class="col-md-6">
                             <div class=portfolio-wrapper>
                                 <div class="portfolio-item">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                     <div class="portfolio-mask">
                                         <div class="portfolio-text">
-                                            <h1>UCO Maps</h3>
-                                            <h5>A web application to determine directions between building at the University of Central Oklahoma.</h5>
-                                            <p>Written in Ruby</p>
-                                            <a href="http://uptownok.com" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
-                                            <a href="http://github.com/keithhand/se-project" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                                            <h1>command.here()</h3>
+                                            <h5>A web portal to mimic a shell environment in any browser.</h5>
+                                            <p>Written in PHP</p>
+                                            <span class="disabled" href="http://app.hand.technology" target="_blank"><i class="fas fa-globe fa-3x"></i></span>
+                                            <a href="http://github.com/keithhand/personal-portal" target="_blank"><i class="fab fa-github fa-3x"></i></a>
                                         </div>
                                     </div>
                                 </div>
