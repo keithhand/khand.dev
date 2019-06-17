@@ -1,5 +1,5 @@
 # personal-webpage
-My personal web portfolio using basic HTML, CSS, JavaScript, and PHP.
+My personal web portfolio using basic HTML, CSS, JavaScript, and Python.
 
 # Libraries
 * Bootstrap v3.3.7
