@@ -1,0 +1,29 @@
+<section id="skills" class="skills bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>My Knowledge Base</h2>
+                    <hr class="small">
+                    {% for lang in data.languages %}
+                        {% if loop.index0 % 4 == 0 %}
+                        <div class="row">
+                        {% endif %}
+                            <div class="col-sm-3">
+                                <div class="skill-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="{{ lang.iconcat }} {{ lang.icon }} fa-stack-1x text-primary"></i>
+                                </span>
+                                    <h4>
+                                        <strong>{{ lang.title }}</strong>
+                                    </h4>
+                                </div>
+                            </div>
+                        {% if loop.index0 % 4 == 3 %}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
