@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ data.name }} - {{ data.title }}</title>
+<meta name="title" content="{{ data.name }} - {{ data.title }}">
+<meta name="author" content="{{ data.author }}">
+<meta name="description" content="{{ data.metaDescription }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ data.website }}">
+<meta property="og:title" content="{{ data.name }} - {{ data.title }}">
+<meta property="og:description" content="{{ data.metaDescription }}">
+<meta property="og:image" content="static/img/thumbnail.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ data.website }}">
+<meta property="twitter:title" content="{{ data.name }} - {{ data.title }}">
+<meta property="twitter:description" content="{{ data.metaDescription }}">
+<meta property="twitter:image" content="static/img/thumbnail.jpg">
+
+<!-- Bootstrap CSS -->
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!-- Custom CSS -->
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
