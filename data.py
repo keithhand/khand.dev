@@ -4,7 +4,7 @@
 
 name="Keith Hand"
 author="keith.hand"
-title="Software Developer"
+title="DevOps / Web Developer"
 email="rkeithhand@gmail.com"
 website="https://keithhand.dev/"
 git="http://www.github.com/keithhand"
@@ -17,7 +17,7 @@ the next big AAA iOS title, or you need someone
 to manage your webserver, I want to be the guy
 to help make your dreams become a reality.
 '''
-metaDescription="A personal webpage for " + name + ", a software engineer and web developer based out of Oklahoma City, Oklahoma."
+metaDescription="A personal webpage for Keith Hand, a software engineer and web developer based out of Oklahoma City, Oklahoma."
 
 languages=[
     {
