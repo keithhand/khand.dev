@@ -5,5 +5,6 @@ services:
         build: 
             context: ../..
             dockerfile: private/docker/prod.Dockerfile
-        ports:
-            - "8000:8000"
+        environment:
+            - VIRTUAL_HOST=hand.technology
+            - VIRTUAL_PORT=8000
