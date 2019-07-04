@@ -1,8 +1,9 @@
 version: '3'
 services:
-    backend:
+    web:
+        container_name: personal-webpage
         build: 
             context: ../..
             dockerfile: private/docker/prod.Dockerfile
         ports:
-            - "80:8000"
+            - "8000:8000"

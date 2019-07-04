@@ -1,0 +1,15 @@
+variables:
+    LOCAL_PATH: "personal-webpage"
+
+stages:
+    - deploy
+
+.deploy: &deploy
+    script:
+        - echo "Hello World"
+
+deploy_prd:
+    <<: *deploy
+    stage: deploy
+    environment:
+        name: "prd"
