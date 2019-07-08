@@ -1,12 +1,9 @@
-variables:
-    LOCAL_PATH: "personal-webpage"
-
 stages:
     - deploy
 
 .deploy: &deploy
     script:
-        - echo "Hello World"
+        - curl -i "http://hand.technology:8080/?sha=$CI_COMMIT_SHA&pname=$CI_PROJECT_NAME&branch=$CI_COMMIT_REF_NAME"
 
 deploy_prd:
     <<: *deploy
