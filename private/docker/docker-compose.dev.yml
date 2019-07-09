@@ -1,0 +1,15 @@
+version: '3'
+services:
+    web:
+        container_name: development-server
+        image: development-server:current
+        build: 
+            context: ../..
+            dockerfile: private/docker/prod.Dockerfile
+        environment:
+            - VIRTUAL_HOST=dev.hand.technology
+            - VIRTUAL_PORT=8000
+networks:
+    default:
+        external:
+            name: webproxy
