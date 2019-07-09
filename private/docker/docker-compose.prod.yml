@@ -2,12 +2,16 @@ version: '3'
 services:
     web:
         container_name: personal-webpage
+        image: personal-webpage:stable
         build: 
             context: ../..
             dockerfile: private/docker/prod.Dockerfile
         environment:
-            - VIRTUAL_HOST=hand.technology
+            - VIRTUAL_HOST=keithhand.dev, www.keithhand.dev, hand.technology, www.hand.technology
             - VIRTUAL_PORT=8000
+            - LETSENCRYPT_HOST=keithhand.dev, www.keithhand.dev, hand.technology, www.hand.technology
+            - LETSENCRYPT_EMAIL=keith@hand.technology
+        restart: always
 networks:
     default:
         external:

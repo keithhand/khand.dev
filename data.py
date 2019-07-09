@@ -1,12 +1,11 @@
 # This is the data file used to modify all fields on the page.
 # Here you can add new languages and projects by following the
 # templates provided
-
 name="Keith Hand"
 author="keith.hand"
 title="DevOps / Web Developer"
 email="rkeithhand@gmail.com"
-website="https://keithhand.dev/"
+website="https://keithhand.dev"
 git="http://www.github.com/keithhand"
 phone="(405) 574 5813"
 banner="Hello, my name is Keith, and I like to write code!"
