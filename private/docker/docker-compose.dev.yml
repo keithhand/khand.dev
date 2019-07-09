@@ -2,7 +2,7 @@ version: '3'
 services:
     web:
         container_name: development-server
-        image: personal-webpage:latest
+        image: development-server:current
         build: 
             context: ../..
             dockerfile: private/docker/prod.Dockerfile
