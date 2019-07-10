@@ -13,8 +13,6 @@ deploy_dev:
     environment:
         url: "https://dev.hand.technology/"
         name: $ENVIRONMENT
-    except:
-        - master
 
 deploy_prd:
     <<: *deploy
