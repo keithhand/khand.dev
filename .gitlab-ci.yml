@@ -2,25 +2,22 @@ stages:
     - deploy
 
 .deploy: &deploy
+    stage: deploy
     script:
-        - deployer --env=$ENVIRONMENT --sha=$CI_COMMIT_SHA --project-name=$CI_PROJECT_NAME
+        - deployer --env=$ENVIRONMENT --project-name=$CI_PROJECT_NAME
 
 deploy_dev:
     <<: *deploy
-    stage: deploy
     variables: 
-        ENVIRONMENT: "development"
+        ENVIRONMENT: "dev"
     environment:
         url: "https://dev.hand.technology/"
         name: $ENVIRONMENT
-    except:
-        - master
 
 deploy_prd:
     <<: *deploy
-    stage: deploy
     variables: 
-        ENVIRONMENT: "production"
+        ENVIRONMENT: "prod"
     environment:
         url: "https://keithhand.dev/"
         name: $ENVIRONMENT
