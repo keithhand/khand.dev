@@ -3,24 +3,26 @@ stages:
 
 .deploy: &deploy
     script:
-        - deployer --env=$ENVIRONMENT --sha=$CI_COMMIT_SHA --project-name=$CI_PROJECT_NAME
+        - docker-compose -f ./private/docker/docker-compose.$ENVIRONMENT.yml up -d --build
+    after_script:
+        - echo "successful deployment"
 
 deploy_dev:
     <<: *deploy
     stage: deploy
+    before_script: 
+        - check-dev-server
     variables: 
-        ENVIRONMENT: "development"
+        ENVIRONMENT: "dev"
     environment:
         url: "https://dev.hand.technology/"
         name: $ENVIRONMENT
-    except:
-        - master
 
 deploy_prd:
     <<: *deploy
     stage: deploy
     variables: 
-        ENVIRONMENT: "production"
+        ENVIRONMENT: "prod"
     environment:
         url: "https://keithhand.dev/"
         name: $ENVIRONMENT
