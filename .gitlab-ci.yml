@@ -3,11 +3,27 @@ stages:
 
 .deploy: &deploy
     script:
-        - curl -f "https://deploy.hand.technology/?sha=$CI_COMMIT_SHA&pname=$CI_PROJECT_NAME"
+        - deployer --env=$ENVIRONMENT --sha=$CI_COMMIT_SHA --project-name=$CI_PROJECT_NAME
+
+deploy_dev:
+    <<: *deploy
+    stage: deploy
+    variables: 
+        ENVIRONMENT: "development"
+    environment:
+        url: "https://dev.hand.technology/"
+        name: $ENVIRONMENT
+    except:
+        - master
 
 deploy_prd:
     <<: *deploy
     stage: deploy
+    variables: 
+        ENVIRONMENT: "production"
     environment:
-        name: "production"
         url: "https://keithhand.dev/"
+        name: $ENVIRONMENT
+    only:
+        - master
+    when: manual
