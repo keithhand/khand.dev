@@ -2,16 +2,12 @@ stages:
     - deploy
 
 .deploy: &deploy
+    stage: deploy
     script:
-        - docker-compose -f ./private/docker/docker-compose.$ENVIRONMENT.yml up -d --build
-    after_script:
-        - echo "successful deployment"
+        - deployer --env=$ENVIRONMENT --project-name=$CI_PROJECT_NAME
 
 deploy_dev:
     <<: *deploy
-    stage: deploy
-    before_script: 
-        - check-dev-server
     variables: 
         ENVIRONMENT: "dev"
     environment:
@@ -20,7 +16,6 @@ deploy_dev:
 
 deploy_prd:
     <<: *deploy
-    stage: deploy
     variables: 
         ENVIRONMENT: "prod"
     environment:
