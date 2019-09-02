@@ -87,10 +87,6 @@ hr.small {
     transition: all 0.4s ease 0s;
 }
 
-.menu-close {
-    close: black !important;
-}
-
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -128,12 +124,14 @@ hr.small {
     line-height: 55px;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999;
+.sidebar-nav > .sidebar-brand a,
+#menu-close {
+    color: #999 !important;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+.sidebar-nav > .sidebar-brand a:hover,
+#menu-close:hover {
+    color: #fff !important;
     background: none;
 }
 
