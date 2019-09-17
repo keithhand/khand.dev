@@ -171,8 +171,9 @@ hr.small {
 }
 
 .title {
-    background: rgba(33, 33, 33, 0.60);
-    padding: 20px;
+    background: rgba(33, 33, 33, 0.55);
+    padding-top: 20px;
+    padding-bottom: 20px;
     border: thick inset rgba(33, 33, 33, 0.15);
     border-radius: 20px;
     position: relative;
