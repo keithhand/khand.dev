@@ -170,6 +170,15 @@ hr.small {
     -o-background-size: cover;
 }
 
+.title {
+    background: rgba(33, 33, 33, 0.60);
+    padding: 20px;
+    border: thick inset rgba(33, 33, 33, 0.15);
+    border-radius: 20px;
+    position: relative;
+    width: 50%;
+}
+
 /* About */
 
 .about {
