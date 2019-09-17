@@ -1,10 +1,25 @@
 stages:
+    - build
+    - test
     - deploy
 
-.deploy: &deploy
-    stage: deploy
+.default: &default
+    variables: 
+        ENVIRONMENT: "dev"
     script:
-        - deployer --env=$ENVIRONMENT --project-name=$CI_PROJECT_NAME
+        - deployer --env=$ENVIRONMENT --project-name=$CI_PROJECT_NAME $CI_JOB_STAGE
+
+.deploy: &deploy
+    <<: *default
+    stage: deploy
+
+build:
+    <<: *default
+    stage: build
+
+test:
+    <<: *default
+    stage: test
 
 deploy_dev:
     <<: *deploy
@@ -21,6 +36,4 @@ deploy_prd:
     environment:
         url: "https://keithhand.dev/"
         name: $ENVIRONMENT
-    only:
-        - master
     when: manual
