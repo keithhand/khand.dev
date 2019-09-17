@@ -3,7 +3,7 @@
 # templates provided
 name="Keith Hand"
 author="keith.hand"
-title="DevOps / Web Developer"
+title="DevOps / Software Developer"
 email="rkeithhand@gmail.com"
 website="https://keithhand.dev"
 git="http://www.github.com/keithhand"
