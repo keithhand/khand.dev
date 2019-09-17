@@ -3,7 +3,7 @@
 # templates provided
 name="Keith Hand"
 author="keith.hand"
-title="DevOps / Web Developer"
+title="DevOps / Software Developer"
 email="rkeithhand@gmail.com"
 website="https://keithhand.dev"
 git="http://www.github.com/keithhand"
@@ -103,11 +103,19 @@ languages=[
 
 projects=[
     {
+        'title': "keithhand.dev",
+        'desc': "You're here! This site has been my test site to learn new tech so I've done some fun back end stuff with it. Check out the Github!",
+        'lang': "Python (Flask)",
+        'git': "http://github.com/keithhand/personal-webpage",
+        'web': "https://keithhand.dev/",
+        'img': "homepage.jpg"
+    },
+    {
         'title': "UCO Maps",
         'desc': "A web application to determine directions between building at the University of Central Oklahoma.",
         'lang': "Ruby",
         'git': "http://github.com/keithhand/se-project",
-        'web': "http://uptownok.com/",
+        # 'web': "http://uptownok.com/",
         'img': "portfolio-3.jpg"
     },
     {
@@ -117,13 +125,13 @@ projects=[
         'git': "http://github.com/keithhand/ant-facts",
         'img': "portfolio-2.jpg"
     },
-    {
-        'title': "command.here()",
-        'desc': "A web portal to mimic a shell environment in any browser.",
-        'lang': "TBD",
-        'git': "http://github.com/keithhand/personal-portal",
-        'img': "portfolio-1.jpg"
-    },
+    # {
+    #     'title': "command.here()",
+    #     'desc': "A web portal to mimic a shell environment in any browser.",
+    #     'lang': "TBD",
+    #     'git': "http://github.com/keithhand/personal-portal",
+    #     'img': "portfolio-1.jpg"
+    # },
     {
         'title': "Realm Tracker Extended",
         'desc': "A firefox extension that gives added functionality to realmtracker.com.",

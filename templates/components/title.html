@@ -1,9 +1,18 @@
 <header id="top" class="header bg-primary">
     <div class="text-vertical-center">
-        <h1>{{ data.name }}</h1>
-        <h3>{{ data.title }}</h3>
+        <div class = "container">
+            <div class="row align-items-center justify-content-md-center">
+                <div class="col-md-auto">
+                    <div class="container title">
+
+                        <h1>{{ data.name }}</h1>
+                        <h3>{{ data.title }}</h3>
+                        <a href="#about" class="btn btn-light btn-lg">Who am I?</a>
+                        {#<a href="static/docs/resume.pdf" class="btn btn-light btn-lg">View my resume</a>  Removing temporarily until get server storage figured out. #}
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
-        <a href="#about" class="btn btn-light btn-lg">Who am I?</a>
-        <a href="static/docs/resume.pdf" class="btn btn-light btn-lg">View my resume</a>
     </div>
 </header>

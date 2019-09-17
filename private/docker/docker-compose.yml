@@ -1,0 +1,13 @@
+version: '2'
+services:
+    web:
+        build: 
+            context: ../..
+            dockerfile: private/docker/Dockerfile
+        ports:
+            - "80:5000"
+        volumes:
+            - ../..:/app
+        env_file:
+            - ../../.env
+        command: flask run

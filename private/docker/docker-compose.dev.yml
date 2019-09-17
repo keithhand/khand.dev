@@ -5,10 +5,11 @@ services:
         image: development-server:current
         build: 
             context: ../..
-            dockerfile: private/docker/prod.Dockerfile
+            dockerfile: private/docker/Dockerfile
         environment:
             - VIRTUAL_HOST=dev.hand.technology
             - VIRTUAL_PORT=8000
+        command: gunicorn -b 0.0.0.0:8000 main:app
 networks:
     default:
         external:

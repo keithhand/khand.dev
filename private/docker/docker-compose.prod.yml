@@ -5,13 +5,14 @@ services:
         image: personal-webpage:stable
         build: 
             context: ../..
-            dockerfile: private/docker/prod.Dockerfile
+            dockerfile: private/docker/Dockerfile
         environment:
             - VIRTUAL_HOST=keithhand.dev, www.keithhand.dev, hand.technology, www.hand.technology
             - VIRTUAL_PORT=8000
             - LETSENCRYPT_HOST=keithhand.dev, www.keithhand.dev, hand.technology, www.hand.technology
             - LETSENCRYPT_EMAIL=keith@hand.technology
         restart: always
+        command: gunicorn -b 0.0.0.0:8000 main:app
 networks:
     default:
         external:
