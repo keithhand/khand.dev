@@ -115,7 +115,7 @@ projects=[
         'desc': "A web application to determine directions between building at the University of Central Oklahoma.",
         'lang': "Ruby",
         'git': "http://github.com/keithhand/se-project",
-        # 'web': "http://uptownok.com/",
+        'web': "http://uptownok.com/",
         'img': "portfolio-3.jpg"
     },
     {
