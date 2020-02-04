@@ -8,10 +8,12 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "lint": "eslint \"src/**/*.{js,vue}\""
+    "lint": "eslint \"src/**/*.{js,vue}\"",
+    "lint-fix": "eslint \"src/**/*.{js,vue}\" --fix"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "lodash": "^4.17.15"
   },
   "browserslist": [
     "> 1%",

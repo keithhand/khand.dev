@@ -1,50 +1,118 @@
 <template>
   <div id="app">
     <header>
-      <h1>Vue.js SPA</h1>
+      <jumbotron
+        :name="contact.name"
+        :title="contact.title"
+      />
     </header>
     <main>
-      <aside class="sidebar" />
-      <div class="content" />
+      <aside>
+        <description
+          :header="description.header"
+          :content="description.content"
+        />
+      </aside>
+      <languages
+        :languages="language_list"
+      />
+      <projects
+        :projects="project_list"
+      />
+      <contact
+        :name="contact.name"
+        :phone="contact.phone"
+        :email="contact.email"
+      />
     </main>
+    <footer>
+      <copyright />
+    </footer>
   </div>
 </template>
 
 <script>
+import _ from 'lodash';
+
+import Jumbotron from './js/components/Jumbotron.vue';
+import Description from './js/components/Description.vue';
+import Languages from './js/components/Languages.vue';
+import Projects from './js/components/Projects.vue';
+import Contact from './js/components/Contact.vue';
+import Copyright from './js/components/Copyright.vue';
+
 export default {
+  components: {
+    Jumbotron,
+    Description,
+    Languages,
+    Projects,
+    Contact,
+    Copyright,
+  },
+
   data() {
     return {
-      posts: [],
+      contact: {
+        name: 'Keith Hand',
+        title: 'DevOps Engineer / Software Developer',
+        email: 'keith@hand.technology',
+        phone: 4055745813,
+      },
+      description: {
+        header: 'Hello, my name is Keith, and I like to write code!',
+        content: 'I enjoy taking on any project, big or small. Whether you need a personal webpage, you have the next big AAA iOS title, or you need someone to manage your webserver, I want to be the guy to help make your dreams become a reality.',
+      },
     };
+  },
+
+  computed: {
+    language_list() {
+      return _.range(16).map((i) => ({
+        title: `language-${i + 1}`,
+        icon: `icon-${i + 1}`,
+      }));
+    },
+
+    project_list() {
+      return _.range(4).map((i) => ({
+        name: `project-${i + 1}`,
+        image_url: 'https://source.unsplash.com/random/800x600',
+      }));
+    },
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
+
+  hr {
+    width: 60%;
+  }
 </style>
