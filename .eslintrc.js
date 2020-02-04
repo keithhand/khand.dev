@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:vue/recommended',
-    'airbnb'
+    'airbnb-base'
   ],
   rules: {
     // override/add rules settings here, such as:
