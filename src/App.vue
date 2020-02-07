@@ -59,7 +59,7 @@ export default {
         name: 'Keith Hand',
         title: 'DevOps Engineer / Software Developer',
         email: 'keith@hand.technology',
-        phone: 4055745813,
+        phone: '(405) 574 5813',
       },
       description: {
         header: 'Hello, my name is Keith, and I like to write code!',

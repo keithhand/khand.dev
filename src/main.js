@@ -10,7 +10,7 @@ import {
 // fab icons
 import {
   faHtml5, faPhp, faJsSquare, faCss3Alt, faPython, faJava, faGit, faDocker, faLinux, faWindows,
-  faApple,
+  faApple, faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 // far icons
 import {
@@ -20,7 +20,7 @@ import App from './App.vue';
 // add all fontawesome icons to library object
 library.add(faHtml5, faPhp, faJsSquare, faCss3Alt, faPython, faJava, faGit, faDocker, faLinux,
   faWindows, faApple, faCircle, faTerminal, faDatabase, faFileAlt, faGem, faLaptopCode,
-  faEnvelope, faPhone);
+  faEnvelope, faPhone, faGithub);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
