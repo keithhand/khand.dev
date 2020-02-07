@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "vue": "^2.5.11",
-    "lodash": "^4.17.15"
+    "vue-parallaxy": "^1.1.1"
   },
   "browserslist": [
     "> 1%",

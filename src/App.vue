@@ -85,13 +85,18 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "assets/css/variables";
+
+  body {
+    margin: 0;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 
   h1, h2 {
@@ -113,6 +118,10 @@ export default {
   }
 
   hr {
-    width: 60%;
+    width: 100px;
+  }
+
+  section {
+    padding: 50px 0;
   }
 </style>
