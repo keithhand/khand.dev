@@ -14,7 +14,7 @@
         />
       </aside>
       <languages
-        :languages="language_list"
+        :languages="languages"
       />
       <projects
         :projects="project_list"
@@ -40,6 +40,8 @@ import Languages from './js/components/Languages.vue';
 import Projects from './js/components/Projects.vue';
 import Contact from './js/components/Contact.vue';
 import Copyright from './js/components/Copyright.vue';
+
+import languages from './assets/languages.json';
 
 export default {
   components: {
@@ -67,12 +69,7 @@ export default {
   },
 
   computed: {
-    language_list() {
-      return _.range(16).map((i) => ({
-        title: `language-${i + 1}`,
-        icon: `icon-${i + 1}`,
-      }));
-    },
+    languages: () => languages,
 
     project_list() {
       return _.range(4).map((i) => ({

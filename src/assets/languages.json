@@ -1,0 +1,66 @@
+[
+  {
+    "title": "HTML",
+    "icon": ["fab", "html5"]
+  },
+  {
+    "title": "PHP",
+    "icon": ["fab", "php"]
+  },
+  {
+    "title": "JavaScript",
+    "icon": ["fab", "js-square"]
+  },
+  {
+    "title": "CSS",
+    "icon": ["fab","css3-alt"]
+  },
+  {
+    "title": "C++",
+    "icon": ["fas","laptop-code"]
+  },
+  {
+    "title": "Python",
+    "icon": ["fab", "python"]
+  },
+  {
+    "title": "Ruby",
+    "icon": ["far", "gem"]
+  },
+  {
+    "title": "CSS",
+    "icon": ["fab", "java"]
+  },
+  {
+    "title": "git",
+    "icon": ["fab", "git"]
+  },
+  {
+    "title": "Docker",
+    "icon": ["fab", "docker"]
+  },
+  {
+    "title": "SQL",
+    "icon": ["fas", "database"]
+  },
+  {
+    "title": "LaTeX",
+    "icon": ["far", "file-alt"]
+  },
+  {
+    "title": "sh",
+    "icon": ["fa","terminal"]
+  },
+  {
+    "title": "Linux",
+    "icon": ["fab", "linux"]
+  },
+  {
+    "title": "Windows",
+    "icon": ["fab", "windows"]
+  },
+  {
+    "title": "macOS",
+    "icon": ["fab", "apple"]
+  }
+]
