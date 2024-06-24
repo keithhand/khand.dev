@@ -18,7 +18,6 @@ const (
 )
 
 func getPing(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
 	io.WriteString(w, "pong")
 }
 
@@ -31,7 +30,6 @@ type GitHubRepo struct {
 }
 
 func getProjects(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
 	defer func() {
 		for i := range repos {
 			io.WriteString(w, fmt.Sprintf("repo: %s\n", repos[i]))
@@ -83,11 +81,18 @@ func NewEnvironment() Environment {
 	}
 }
 
+func WithLogs(h http.HandlerFunc) http.HandlerFunc {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
+		h.ServeHTTP(w, r)
+	})
+}
+
 func main() {
 	env := NewEnvironment()
 
-	http.HandleFunc("GET /ping", getPing)
-	http.HandleFunc("GET /projects", getProjects)
+	http.HandleFunc("GET /ping", WithLogs(getPing))
+	http.HandleFunc("GET /projects", WithLogs(getProjects))
 
 	server := http.Server{
 		Addr: fmt.Sprintf(":%d", env.Port),
