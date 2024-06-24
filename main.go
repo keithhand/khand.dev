@@ -1,10 +1,12 @@
 package main
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"html"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"strconv"
@@ -18,6 +20,47 @@ const (
 func getPing(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
 	io.WriteString(w, "pong")
+}
+
+var repos []GitHubRepo
+
+type GitHubRepo struct {
+	RepoName    string `json:"name"`
+	Description string `json:"description"`
+	Url         string `json:"url"`
+}
+
+func getProjects(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
+	defer func() {
+		for i := range repos {
+			io.WriteString(w, fmt.Sprintf("repo: %s\n", repos[i]))
+		}
+	}()
+
+	if repos != nil {
+		return
+	}
+
+	user := "keithhand"
+	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos", user)
+	resp, err := http.Get(repoApi)
+	if err != nil {
+		fmt.Printf("error getting repo information: %s\n", err)
+	}
+
+	if resp.Body != nil {
+		defer resp.Body.Close()
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	if err = json.Unmarshal(body, &repos); err != nil {
+		log.Fatalln(err)
+	}
 }
 
 type Environment struct {
@@ -44,6 +87,7 @@ func main() {
 	env := NewEnvironment()
 
 	http.HandleFunc("GET /ping", getPing)
+	http.HandleFunc("GET /projects", getProjects)
 
 	server := http.Server{
 		Addr: fmt.Sprintf(":%d", env.Port),
