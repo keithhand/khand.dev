@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	env := config.NewConfig()
-	handler := routes.NewServerHandler()
+	cfg := config.New()
+	hdl := routes.NewHandler()
 	srv := http.Server{
-		Addr:    fmt.Sprintf(":%d", env.Port),
-		Handler: handler,
+		Addr:    fmt.Sprintf(":%d", cfg.Port),
+		Handler: hdl,
 	}
 
 	fmt.Printf("starting server at: %s\n", srv.Addr)

@@ -17,11 +17,11 @@ type envVar struct {
 	Default string
 }
 
-type config struct {
+type appConfig struct {
 	Port int
 }
 
-func NewConfig() config {
+func New() appConfig {
 	portEnv := os.Getenv(port.Key)
 	if portEnv == "" {
 		portEnv = port.Default
@@ -32,7 +32,7 @@ func NewConfig() config {
 		panic(err)
 	}
 
-	return config{
+	return appConfig{
 		Port: port,
 	}
 }
