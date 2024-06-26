@@ -1,38 +1,42 @@
 package config
 
 import (
+	"log"
 	"os"
 	"strconv"
 )
 
 var (
-	port = envVar{
-		Key:     "APP_PORT",
-		Default: "8080",
-	}
+	ServerPort = NewEnv("SERVER_PORT", 8080)
 )
 
-type envVar struct {
-	Key     string
-	Default string
+type EnvTypes interface {
+	int
 }
 
-type appConfig struct {
-	Port int
-}
+func NewEnv[T EnvTypes](key string, defaultValue T) T {
+	val := defaultValue
 
-func New() appConfig {
-	portEnv := os.Getenv(port.Key)
-	if portEnv == "" {
-		portEnv = port.Default
+	defer func() {
+		log.Printf("finished configuring envvar: %s:%v\n", key, val)
+	}()
+
+	env := os.Getenv(key)
+	if env == "" {
+		return val
 	}
 
-	port, err := strconv.Atoi(portEnv)
-	if err != nil {
-		panic(err)
+	switch vp := any(&val).(type) {
+	case *string:
+		*vp = env
+	case *int:
+		ival, err := strconv.Atoi(env)
+		if err != nil {
+			log.Printf("error reading env value %s. got %s expected int. falling back to %v", key, env, val)
+			return val
+		}
+		*vp = ival
 	}
 
-	return appConfig{
-		Port: port,
-	}
+	return val
 }
