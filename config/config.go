@@ -8,10 +8,11 @@ import (
 
 var (
 	ServerPort = NewEnv("SERVER_PORT", 8080)
+	GHProfile  = NewEnv("GH_PROFILE", "keithhand")
 )
 
 type EnvTypes interface {
-	int
+	int | string
 }
 
 func NewEnv[T EnvTypes](key string, defaultValue T) T {

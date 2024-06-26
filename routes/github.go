@@ -6,6 +6,8 @@ import (
 	"io"
 	"log"
 	"net/http"
+
+	"khand.dev/khand.dev/config"
 )
 
 var repos []gitHubRepo
@@ -39,7 +41,7 @@ func (h projects) Get(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user := "keithhand"
+	user := config.GHProfile
 	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos", user)
 	resp, err := http.Get(repoApi)
 	if err != nil {
