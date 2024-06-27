@@ -1,24 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"os"
+	"log"
 
-	"khand.dev/khand.dev/config"
-	"khand.dev/khand.dev/routes"
+	"khand.dev/khand.dev/server"
 )
 
 func main() {
-	hdl := routes.NewHandler()
-	srv := http.Server{
-		Addr:    fmt.Sprintf(":%d", config.ServerPort),
-		Handler: hdl,
-	}
-
-	fmt.Printf("starting server at: %v\n", srv.Addr)
-	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-		fmt.Printf("error starting server: %s\n", err)
-		os.Exit(1)
+	srv := server.New()
+	if err := srv.Start(); err != nil {
+		log.Fatalf("fatal error: %s\n", err)
 	}
 }
