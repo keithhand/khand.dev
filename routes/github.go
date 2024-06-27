@@ -42,10 +42,10 @@ func (h projects) Get(w http.ResponseWriter, r *http.Request) {
 	}
 
 	user := config.GHProfile
-	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos", user)
+	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos?sort=pushed", user)
 	resp, err := http.Get(repoApi)
 	if err != nil {
-		fmt.Printf("error getting repo information: %s\n", err)
+		log.Printf("error getting repo information: %s\n", err)
 	}
 
 	if resp.Body != nil {
