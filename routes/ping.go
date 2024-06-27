@@ -5,12 +5,16 @@ import (
 	"net/http"
 )
 
-type ping struct{}
-
-func NewPing() ping {
-	return ping{}
+type pingApi struct {
+	msg string
 }
 
-func (h ping) Get(w http.ResponseWriter, _ *http.Request) {
-	io.WriteString(w, "pong")
+func NewPing() pingApi {
+	return pingApi{
+		msg: "pong",
+	}
+}
+
+func (h pingApi) Get(w http.ResponseWriter, _ *http.Request) {
+	io.WriteString(w, h.msg)
 }

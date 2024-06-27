@@ -5,21 +5,15 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-
-	"khand.dev/khand.dev/logs"
 )
 
+const userRepoApi = "https://api.github.com/users/%s/repos?sort=pushed"
+
 type gitHubApi struct {
-	Profile string
+	logger  logger
+	profile string
+	repos   []gitHubRepo
 }
-
-func NewGitHubApi(profile string) gitHubApi {
-	return gitHubApi{
-		Profile: profile,
-	}
-}
-
-var repos []gitHubRepo
 
 type gitHubRepo struct {
 	RepoName    string `json:"name"`
@@ -27,23 +21,34 @@ type gitHubRepo struct {
 	Url         string `json:"url"`
 }
 
-func (api gitHubApi) GetProjects(w http.ResponseWriter, r *http.Request) {
+func NewGitHub(lgr logger, profile string) gitHubApi {
+	return gitHubApi{
+		logger:  lgr,
+		profile: profile,
+	}
+}
+
+func (gh gitHubApi) GetRepos(w http.ResponseWriter, r *http.Request) {
 	defer func() {
-		for i := range repos {
-			io.WriteString(w, fmt.Sprintf("repo: %s\n", repos[i]))
+		for i := range gh.repos {
+			io.WriteString(w, fmt.Sprintf("repo: %s\n", gh.repos[i]))
 		}
 	}()
 
-	if repos != nil {
+	if gh.repos != nil {
 		return
 	}
 
-	user := api.Profile
-	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos?sort=pushed", user)
+	getUserRepos(&gh.repos, gh.profile, gh.logger)
+}
 
-	resp, err := http.Get(repoApi)
+func getUserRepos(rr *[]gitHubRepo, user string, log logger) {
+	url := fmt.Sprintf(userRepoApi, user)
+	log.Debug("fetching github user data via", "url", url)
+
+	resp, err := http.Get(url)
 	if err != nil {
-		logs.Warn(fmt.Sprintf("error getting repo information: %s\n", err))
+		log.Error(fmt.Errorf("initializing request to %s: %w", url, err).Error())
 	}
 
 	if resp.Body != nil {
@@ -52,10 +57,14 @@ func (api gitHubApi) GetProjects(w http.ResponseWriter, r *http.Request) {
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		logs.Error(err.Error())
+		log.Error(fmt.Errorf("reading repo reponse: %w", err).Error())
 	}
 
-	if err = json.Unmarshal(body, &repos); err != nil {
-		logs.Error(err.Error())
+	if err = json.Unmarshal(body, rr); err != nil {
+		log.Error(fmt.Errorf("unmarshalling repo json: %w", err).Error())
+	}
+
+	if len(*rr) == 0 {
+		log.Warn("found no repos for", "user", user)
 	}
 }

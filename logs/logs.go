@@ -6,19 +6,11 @@ import (
 	"os"
 )
 
-type Logger interface {
-	Info(string, ...any)
-	Debug(string, ...any)
-	Warn(string, ...any)
-	Error(string, ...any)
-}
-
 var (
-	logger Logger               = newLogger(os.Stdout)
-	Info   func(string, ...any) = logger.Info
-	Debug  func(string, ...any) = logger.Debug
-	Error  func(string, ...any) = logger.Error
-	Warn   func(string, ...any) = logger.Warn
+	Info  func(string, ...any) = slog.Info
+	Debug func(string, ...any) = slog.Debug
+	Error func(string, ...any) = slog.Error
+	Warn  func(string, ...any) = slog.Warn
 )
 
 func Fatal(err error) {
@@ -26,7 +18,7 @@ func Fatal(err error) {
 	os.Exit(1)
 }
 
-func newLogger(out io.Writer) Logger {
+func New(out io.Writer) *slog.Logger {
 	opts := newOpts()
 	handler := newHandler(out, opts)
 	logger := slog.New(handler)

@@ -1,32 +1,39 @@
 package routes
 
-import (
-	"fmt"
-	"html"
-	"net/http"
+import "net/http"
 
-	"khand.dev/khand.dev/config"
-	"khand.dev/khand.dev/logs"
-)
-
-func NewHandler(cfg *config.Config) http.Handler {
-	mux := http.NewServeMux()
-	addHandlers(mux, cfg)
-	var handler http.Handler = mux
-	handler = withLogs(handler)
-	return handler
+type logger interface {
+	Debug(string, ...any)
+	Warn(string, ...any)
+	Error(string, ...any)
 }
 
-func addHandlers(mux *http.ServeMux, cfg *config.Config) {
-	ping := NewPing()
-	mux.HandleFunc("GET /ping", ping.Get)
-	github := NewGitHubApi(cfg.GHProfile)
-	mux.HandleFunc("GET /projects", github.GetProjects)
+type ping interface {
+	Get(http.ResponseWriter, *http.Request)
 }
 
-func withLogs(h http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		logs.Debug(fmt.Sprintf("got %s request", html.EscapeString(r.URL.Path)))
-		h.ServeHTTP(w, r)
-	})
+type gitHub interface {
+	GetRepos(http.ResponseWriter, *http.Request)
+}
+
+type routes struct {
+	logger logger
+	ping   ping
+	gitHub gitHub
+}
+
+func New(lgr logger, ping ping, gh gitHub) func(*http.ServeMux) {
+	rts := routes{
+		logger: lgr,
+		ping:   ping,
+		gitHub: gh,
+	}
+	return rts.addToMux
+}
+
+func (r routes) addToMux(mux *http.ServeMux) {
+	r.logger.Debug("starting adding routes to http mux...")
+	mux.HandleFunc("GET /ping", r.ping.Get)
+	mux.HandleFunc("GET /projects", r.gitHub.GetRepos)
+	r.logger.Debug("... finished adding routes to http mux")
 }

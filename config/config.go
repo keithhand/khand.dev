@@ -4,40 +4,66 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
-	"khand.dev/khand.dev/logs"
 )
 
 type Config struct {
-	GHProfile  string
-	ServerPort int
+	Server
+	GitHubApi
 }
 
-func New() *Config {
+var log logger
+
+type logger interface {
+	Debug(string, ...any)
+	Error(string, ...any)
+}
+
+func New(lgr logger) *Config {
+	log = lgr
 	return &Config{
-		GHProfile:  newEnv("GH_PROFILE", "keithhand"),
-		ServerPort: newEnv("SERVER_PORT", 8080),
+		GitHubApi: GitHubApi{
+			profile: newEnv("GH_PROFILE", "keithhand"),
+		},
+		Server: Server{
+			port: newEnv("SERVER_PORT", 8080),
+		},
 	}
+}
+
+type Server struct {
+	port int
+}
+
+func (cfg Server) Port() int {
+	return cfg.port
+}
+
+type GitHubApi struct {
+	profile string
+}
+
+func (cfg GitHubApi) GHProfile() string {
+	return cfg.profile
 }
 
 type EnvTypes interface {
 	int | string
 }
 
-func newEnv[T EnvTypes](key string, defaultValue T) T {
-	val := defaultValue
+func newEnv[T EnvTypes](key string, def T) T {
+	val := def
 	defer func() {
-		logs.Debug("finished configuring env:", key, val)
+		log.Debug("finished configuring env:", key, val)
 	}()
 
 	env := os.Getenv(key)
 	if env == "" {
-		logs.Debug("env value not set, using default", key, val)
+		log.Debug("env value not set, falling back to default", key, val)
 		return val
 	}
 
 	if err := setValueFromEnv(&val, env); err != nil {
-		logs.Error(fmt.Errorf("config: setting %s: %w", key, err).Error())
+		log.Error(fmt.Errorf("config: setting %s: %w", key, err).Error())
 	}
 
 	return val
