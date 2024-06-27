@@ -4,11 +4,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 
-	"khand.dev/khand.dev/config"
+	"khand.dev/khand.dev/logs"
 )
+
+type gitHubApi struct {
+	Profile string
+}
+
+func NewGitHubApi(profile string) gitHubApi {
+	return gitHubApi{
+		Profile: profile,
+	}
+}
 
 var repos []gitHubRepo
 
@@ -18,19 +27,7 @@ type gitHubRepo struct {
 	Url         string `json:"url"`
 }
 
-type gitHubApiService struct {
-	Projects projects
-}
-
-func NewGitHubApiService() gitHubApiService {
-	return gitHubApiService{
-		Projects: projects{},
-	}
-}
-
-type projects struct{}
-
-func (h projects) Get(w http.ResponseWriter, r *http.Request) {
+func (api gitHubApi) GetProjects(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		for i := range repos {
 			io.WriteString(w, fmt.Sprintf("repo: %s\n", repos[i]))
@@ -41,11 +38,12 @@ func (h projects) Get(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user := config.GHProfile
+	user := api.Profile
 	repoApi := fmt.Sprintf("https://api.github.com/users/%s/repos?sort=pushed", user)
+
 	resp, err := http.Get(repoApi)
 	if err != nil {
-		log.Printf("error getting repo information: %s\n", err)
+		logs.Warn(fmt.Sprintf("error getting repo information: %s\n", err))
 	}
 
 	if resp.Body != nil {
@@ -54,10 +52,10 @@ func (h projects) Get(w http.ResponseWriter, r *http.Request) {
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		log.Fatalln(err)
+		logs.Error(err.Error())
 	}
 
 	if err = json.Unmarshal(body, &repos); err != nil {
-		log.Fatalln(err)
+		logs.Error(err.Error())
 	}
 }

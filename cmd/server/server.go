@@ -1,14 +1,27 @@
 package main
 
 import (
-	"log"
+	"context"
+	"fmt"
+	"os"
 
+	"khand.dev/khand.dev/logs"
 	"khand.dev/khand.dev/server"
 )
 
-func main() {
-	srv := server.New()
+func run(ctx context.Context, out *os.File, _ []string) error {
+	// logger := logs.NewLogger(out)
+	srv := server.New(ctx)
 	if err := srv.Start(); err != nil {
-		log.Fatalf("fatal error: %s\n", err)
+		return fmt.Errorf("starting server: %w", err)
+	}
+	return nil
+}
+
+func main() {
+	ctx := context.Background()
+	if err := run(ctx, os.Stdout, os.Args); err != nil {
+		logs.Error(fmt.Errorf("main: %w", err).Error())
+		os.Exit(1)
 	}
 }

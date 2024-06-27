@@ -4,26 +4,29 @@ import (
 	"fmt"
 	"html"
 	"net/http"
+
+	"khand.dev/khand.dev/config"
+	"khand.dev/khand.dev/logs"
 )
 
-func NewHandler() http.Handler {
+func NewHandler(cfg *config.Config) http.Handler {
 	mux := http.NewServeMux()
-	addHandlers(mux)
+	addHandlers(mux, cfg)
 	var handler http.Handler = mux
 	handler = withLogs(handler)
 	return handler
 }
 
-func addHandlers(mux *http.ServeMux) {
-	ping := NewPingService()
+func addHandlers(mux *http.ServeMux, cfg *config.Config) {
+	ping := NewPing()
 	mux.HandleFunc("GET /ping", ping.Get)
-	github := NewGitHubApiService()
-	mux.HandleFunc("GET /projects", github.Projects.Get)
+	github := NewGitHubApi(cfg.GHProfile)
+	mux.HandleFunc("GET /projects", github.GetProjects)
 }
 
 func withLogs(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Printf("got %s request\n", html.EscapeString(r.URL.Path))
+		logs.Debug(fmt.Sprintf("got %s request", html.EscapeString(r.URL.Path)))
 		h.ServeHTTP(w, r)
 	})
 }
