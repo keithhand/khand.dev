@@ -9,11 +9,11 @@ type logger interface {
 }
 
 type ping interface {
-	Get(http.ResponseWriter, *http.Request)
+	Get() http.Handler
 }
 
 type gitHub interface {
-	GetRepos(http.ResponseWriter, *http.Request)
+	GetRepos() http.Handler
 }
 
 type routes struct {
@@ -33,7 +33,7 @@ func New(lgr logger, ping ping, gh gitHub) func(*http.ServeMux) {
 
 func (r routes) addToMux(mux *http.ServeMux) {
 	r.logger.Debug("starting adding routes to http mux...")
-	mux.HandleFunc("GET /ping", r.ping.Get)
-	mux.HandleFunc("GET /projects", r.gitHub.GetRepos)
+	mux.Handle("GET /ping", r.ping.Get())
+	mux.Handle("GET /projects", r.gitHub.GetRepos())
 	r.logger.Debug("... finished adding routes to http mux")
 }

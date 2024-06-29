@@ -23,3 +23,6 @@ go.work.sum
 
 # Go air tmp
 tmp/
+
+# Generated templ files
+*_templ.go

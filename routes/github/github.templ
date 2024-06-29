@@ -1,0 +1,17 @@
+package github
+
+templ ghProjects(rr []gitHubRepo) {
+	if len(rr) == 0 {
+		<div>
+			No repos found
+		</div>
+	}
+	for _, r := range rr {
+		<div>
+			<div>{ r.RepoName }</div>
+			<div>{ r.Description }</div>
+			<div>{ r.Url }</div>
+		</div>
+		<br/>
+	}
+}
