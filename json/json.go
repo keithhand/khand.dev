@@ -12,17 +12,17 @@ type logger interface {
 	Error(string, ...any)
 }
 
-type jsonHandler[T any] struct {
+type jsonHandler struct {
 	logger logger
 }
 
-func New(lgr logger) jsonHandler[any] {
-	return jsonHandler[any]{
+func New(lgr logger) jsonHandler {
+	return jsonHandler{
 		logger: lgr,
 	}
 }
 
-func (j jsonHandler[T]) UnmarshallUrl(url string, obj T) T {
+func (j jsonHandler) UnmarshallUrl(url string, obj any) any {
 	resp, err := http.Get(url)
 	if err != nil {
 		j.logger.Error(fmt.Errorf("initializing request to %s: %w", url, err).Error())
