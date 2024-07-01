@@ -2,38 +2,38 @@ package routes
 
 import "net/http"
 
-type logger interface {
+type Logger interface {
 	Debug(string, ...any)
 	Warn(string, ...any)
 	Error(string, ...any)
 }
 
-type ping interface {
+type Getter interface {
 	Get() http.Handler
 }
 
-type gitHub interface {
-	GetRepos() http.Handler
-}
-
 type routes struct {
-	logger logger
-	ping   ping
-	gitHub gitHub
+	logger Logger
+	ping   Getter
+	index  Getter
+	gitHub Getter
 }
 
-func New(lgr logger, ping ping, gh gitHub) func(*http.ServeMux) {
-	rts := routes{
+func New(lgr Logger, ping Getter, idx Getter, gh Getter) func(*http.ServeMux) {
+	return routes{
 		logger: lgr,
 		ping:   ping,
+		index:  idx,
 		gitHub: gh,
-	}
-	return rts.addToMux
+	}.addToMux
 }
 
 func (r routes) addToMux(mux *http.ServeMux) {
 	r.logger.Debug("starting adding routes to http mux...")
+
 	mux.Handle("GET /ping", r.ping.Get())
-	mux.Handle("GET /projects", r.gitHub.GetRepos())
+	mux.Handle("GET /", r.index.Get())
+	mux.Handle("GET /projects", r.gitHub.Get())
+
 	r.logger.Debug("... finished adding routes to http mux")
 }

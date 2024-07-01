@@ -1,0 +1,21 @@
+package handlers
+
+type GithubApi interface {
+	Repos() []gitHubRepo
+}
+
+templ GhProjects(gh GithubApi) {
+	if len(gh.Repos()) == 0 {
+		<div>
+			No repos found
+		</div>
+	}
+	for _, r := range gh.Repos() {
+		<div>
+			<div>{ r.RepoName }</div>
+			<div>{ r.Description }</div>
+			<div>{ r.RepoUrl }</div>
+		</div>
+		<br/>
+	}
+}

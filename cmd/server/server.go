@@ -6,31 +6,34 @@ import (
 	"os"
 
 	"khand.dev/khand.dev/config"
+	"khand.dev/khand.dev/handlers"
 	"khand.dev/khand.dev/json"
 	"khand.dev/khand.dev/logs"
 	"khand.dev/khand.dev/middlewares"
 	"khand.dev/khand.dev/routes"
-	"khand.dev/khand.dev/routes/github"
-	"khand.dev/khand.dev/routes/ping"
 	"khand.dev/khand.dev/server"
 )
 
 func run(ctx context.Context, out *os.File, _ []string) error {
-	lgr := logs.New(out)
-	cfg := config.New(lgr)
-	jsn := json.New(lgr)
-	mwr := middlewares.New(
-		lgr,
-		middlewares.HttpPathLogs,
-	)
+	logs := logs.New(out)
+	cnfg := config.New(logs)
+	json := json.New(logs)
+	hdlr := handlers.New(logs)
+
 	rts := routes.New(
-		lgr,
-		ping.NewRoute(),
-		github.NewRoute(lgr, jsn, cfg.GHProfile()),
+		logs,
+		hdlr.Ping(),
+		hdlr.Index(),
+		hdlr.GitHub(cnfg, json),
 	)
-	srv := server.NewHttp(ctx, lgr, cfg).
+
+	srv := server.NewHttp(ctx, logs, cnfg).
 		WithRoutes(rts).
-		WithMiddlewares(mwr)
+		WithMiddlewares(middlewares.New(
+			logs,
+			middlewares.HttpPathLogs,
+		))
+
 	if err := srv.Start(); err != nil {
 		return fmt.Errorf("starting server: %w", err)
 	}
