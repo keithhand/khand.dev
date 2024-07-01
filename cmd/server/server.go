@@ -28,7 +28,7 @@ func run(ctx context.Context, out *os.File, _ []string) error {
 		ping.NewRoute(),
 		github.NewRoute(lgr, jsn, cfg.GHProfile()),
 	)
-	srv := server.NewHttp(ctx, lgr, cfg.Port()).
+	srv := server.NewHttp(ctx, lgr, cfg).
 		WithRoutes(rts).
 		WithMiddlewares(mwr)
 	if err := srv.Start(); err != nil {

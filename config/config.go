@@ -37,7 +37,7 @@ func New(lgr Logger) *Config {
 	}
 }
 
-func (cfg Config) Port() int {
+func (cfg Server) Port() int {
 	return cfg.port
 }
 

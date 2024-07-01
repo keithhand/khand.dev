@@ -6,25 +6,29 @@ import (
 	"net/http"
 )
 
-type logger interface {
+type Logger interface {
 	Debug(string, ...any)
 	Error(string, ...any)
 	Warn(string, ...any)
 	Info(string, ...any)
 }
 
+type Config interface {
+	Port() int
+}
+
 type HttpServer struct {
 	server  *http.Server
 	context context.Context
-	logger  logger
+	logger  Logger
 }
 
-func NewHttp(ctx context.Context, lgr logger, port int) *HttpServer {
+func NewHttp(ctx context.Context, lgr Logger, cfg Config) *HttpServer {
 	return &HttpServer{
 		logger:  lgr,
 		context: ctx,
 		server: &http.Server{
-			Addr:    fmt.Sprintf(":%d", port),
+			Addr:    fmt.Sprintf(":%d", cfg.Port()),
 			Handler: http.NewServeMux(),
 		},
 	}
