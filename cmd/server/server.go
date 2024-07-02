@@ -8,29 +8,30 @@ import (
 	"khand.dev/khand.dev/config"
 	"khand.dev/khand.dev/handlers"
 	"khand.dev/khand.dev/json"
-	"khand.dev/khand.dev/logs"
+	"khand.dev/khand.dev/log"
 	"khand.dev/khand.dev/middlewares"
 	"khand.dev/khand.dev/routes"
 	"khand.dev/khand.dev/server"
 )
 
 func run(ctx context.Context, out *os.File, _ []string) error {
-	logs := logs.New(out)
-	cnfg := config.New(logs)
-	json := json.New(logs)
-	hdlr := handlers.New(logs)
+	log := log.New(out)
+	// log.New(out)
+	cnfg := config.New(log)
+	json := json.New(log)
+	hdlr := handlers.New(log)
 
 	rts := routes.New(
-		logs,
+		log,
 		hdlr.Ping(),
 		hdlr.Index(),
 		hdlr.GitHub(cnfg, json),
 	)
 
-	srv := server.NewHttp(ctx, logs, cnfg).
+	srv := server.NewHttp(ctx, log, cnfg).
 		WithRoutes(rts).
 		WithMiddlewares(middlewares.New(
-			logs,
+			log,
 			middlewares.HttpPathLogs,
 		))
 
@@ -43,7 +44,7 @@ func run(ctx context.Context, out *os.File, _ []string) error {
 func main() {
 	ctx := context.Background()
 	if err := run(ctx, os.Stdout, os.Args); err != nil {
-		logs.Error(fmt.Errorf("main: %w", err).Error())
+		log.Error(fmt.Errorf("main: %w", err).Error())
 		os.Exit(1)
 	}
 }
