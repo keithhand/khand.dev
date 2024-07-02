@@ -1,0 +1,31 @@
+services:
+  server:
+    profiles: [ci]
+    image: ghcr.io/keithhand/khand.dev:${TAG}
+    build: &build
+      context: .
+      dockerfile: build/Dockerfile
+      target: deploy
+      args: &args
+        GO_VERSION: "1.22.4"
+        ALPINE_VERSION: "3.20"
+        TEMPL_VERSION: latest
+        LOG_LEVEL: info
+      labels:
+        org.opencontainers.image.source: https://github.com/keithhand/khand.dev
+        org.opencontainers.image.description: "Web server for hosting https://khand.dev/"
+        org.opencontainers.image.licenses: Apache-2.0
+  dev:
+    image: khand.dev:dev
+    build:
+      !!merge <<: *build
+      target: develop
+      args:
+        !!merge <<: *args
+        AIR_VERSION: latest
+    environment:
+      LOG_LEVEL: debug
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/develop
