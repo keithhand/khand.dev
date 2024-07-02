@@ -4,6 +4,7 @@ import (
 	"io"
 	"log/slog"
 	"os"
+	"strings"
 )
 
 var (
@@ -18,17 +19,38 @@ func Fatal(err error) {
 	os.Exit(1)
 }
 
-func New(out io.Writer) *slog.Logger {
-	opts := newOpts()
-	handler := newHandler(out, opts)
-	logger := slog.New(handler)
-	slog.SetDefault(logger)
-	return logger
+type logger struct {
+	*slog.Logger
 }
 
-func newOpts() *slog.HandlerOptions {
+func New(out io.Writer) *logger {
+	opts := newOpts(loggerLevel())
+	handler := newHandler(out, opts)
+	log := slog.New(handler)
+	slog.SetDefault(log)
+	return &logger{
+		Logger: log,
+	}
+}
+
+func loggerLevel() slog.Level {
+	switch strings.ToUpper(os.Getenv("LOG_LEVEL")) {
+	case "ERROR":
+		return slog.LevelError
+	case "WARN":
+		return slog.LevelWarn
+	case "INFO":
+		return slog.LevelInfo
+	case "DEBUG":
+		return slog.LevelDebug
+	default:
+		return slog.LevelInfo
+	}
+}
+
+func newOpts(lvl slog.Level) *slog.HandlerOptions {
 	return &slog.HandlerOptions{
-		Level: slog.LevelDebug,
+		Level: lvl,
 	}
 }
 
