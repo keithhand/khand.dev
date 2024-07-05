@@ -29,6 +29,8 @@ COPY --from=template  /go/bin/templ /go/bin/templ
 ENTRYPOINT ["air"]
 
 FROM alpine:${ALPINE_VERSION} as deploy
+# FIX: for CVE-2024-5535
+RUN apk add openssl=~3.3.1-r1 --no-cache
 USER guest
 COPY --from=build /build/tmp/main /srv/app/server
 ENTRYPOINT ["/srv/app/server"]
