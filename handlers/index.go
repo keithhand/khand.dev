@@ -1,6 +1,7 @@
 package handlers
 
-func (h *handler) Index() *handler {
-	h.viewer = Home()
-	return h
+type index struct{}
+
+func Index() *handler {
+	return New(index{})
 }

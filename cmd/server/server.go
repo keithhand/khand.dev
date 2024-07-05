@@ -19,13 +19,12 @@ func run(ctx context.Context, out *os.File, _ []string) error {
 	// log.New(out)
 	cnfg := config.New(log)
 	json := json.New(log)
-	hdlr := handlers.New(log)
 
 	rts := routes.New(
 		log,
-		hdlr.Ping(),
-		hdlr.Index(),
-		hdlr.GitHub(cnfg, json),
+		handlers.Ping(),
+		handlers.Index(),
+		handlers.GitHub(cnfg, json),
 	)
 
 	srv := server.NewHttp(ctx, log, cnfg).

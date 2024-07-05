@@ -4,7 +4,8 @@ type ping struct {
 	msg string
 }
 
-func (h *handler) Ping() *handler {
-	h.viewer = PingIndex("pong")
-	return h
+func Ping() *handler {
+	return New(ping{
+		msg: "pong",
+	})
 }

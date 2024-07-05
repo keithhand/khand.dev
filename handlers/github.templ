@@ -4,7 +4,7 @@ type GithubApi interface {
 	Repos() []gitHubRepo
 }
 
-templ GhProjects(gh GithubApi) {
+templ (gh gitHubApi) View() {
 	if len(gh.Repos()) == 0 {
 		<div>
 			No repos found

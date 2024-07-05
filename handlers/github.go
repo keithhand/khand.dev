@@ -1,6 +1,9 @@
 package handlers
 
-import "fmt"
+import (
+	"fmt"
+	"log/slog"
+)
 
 type Json interface {
 	UnmarshallUrl(string, any) any
@@ -24,17 +27,16 @@ type gitHubApi struct {
 	repos   []gitHubRepo
 }
 
-func (h *handler) GitHub(config Config, json Json) *handler {
+func GitHub(config Config, json Json) *handler {
 	gh := &gitHubApi{
-		logger:  h.logger,
+		logger:  slog.Default(),
 		json:    json,
 		profile: config.GhProfile(),
 	}
 	if config.MockApi() {
 		gh.repos = mockRepos()
 	}
-	h.viewer = GhProjects(gh)
-	return h
+	return New(gh)
 }
 
 func (gh *gitHubApi) Repos() []gitHubRepo {
