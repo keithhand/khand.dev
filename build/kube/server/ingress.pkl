@@ -1,3 +1,8 @@
+/// The application that [server] belongs to.
+///
+/// This is the first level of the application/environment/cluster directory structure.
+/// To access this property from a module that amends this template, use `module.app`.
+
 amends "..."
 
 ingresses {

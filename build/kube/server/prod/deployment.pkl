@@ -1,0 +1,6 @@
+/// The environment that [resources] belongs to.
+///
+/// This is the second level of the application/environment/cluster directory structure.
+/// To access this property from a module that amends this template, use `module.env`.
+
+amends "..."

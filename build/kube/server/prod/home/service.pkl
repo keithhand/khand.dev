@@ -1,1 +1,6 @@
+/// The cluster that [server] belongs to.
+///
+/// This is the third level of the application/environment/cluster directory structure.
+/// To access this property from a module that amends this template, use `module.cluster`.
+
 amends "..."
