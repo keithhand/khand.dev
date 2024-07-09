@@ -1,0 +1,15 @@
+amends "..."
+
+services {
+  ["server"] {
+    spec {
+      ports {
+        new {
+          name = "ui"
+          targetPort = "ui"
+          port = 80
+        }
+      }
+    }
+  }
+}

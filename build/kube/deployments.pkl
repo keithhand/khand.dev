@@ -1,0 +1,25 @@
+amends "template.pkl"
+
+deployments {
+  default {
+    metadata {
+      namespace = "khand-dev"
+    }
+    spec {
+      selector {
+        matchLabels {
+          ["app"] = module.app
+          ["env"] = module.env
+        }
+      }
+      template {
+        metadata {
+          labels {
+            ["app"] = module.app
+            ["env"] = module.env
+          }
+        }
+      }
+    }
+  }
+}

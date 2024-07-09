@@ -1,0 +1,16 @@
+amends "template.pkl"
+
+ingresses {
+  default {
+    metadata {
+      namespace = "khand-dev"
+      labels {
+        ["app"] = module.app
+        ["env"] = module.env
+      }
+      annotations {
+        ["cert-manager.io/cluster-issuer"] = "khand-dev"
+      }
+    }
+  }
+}
