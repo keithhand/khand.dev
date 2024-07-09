@@ -1,0 +1,4 @@
+function matchModule(mod: Object): Mapping = new {
+  ["app"] = mod.app
+  ["env"] = mod.env
+}

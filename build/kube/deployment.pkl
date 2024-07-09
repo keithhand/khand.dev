@@ -1,5 +1,7 @@
 amends "template.pkl"
 
+import "label.pkl"
+
 deployments {
   default {
     metadata {
@@ -7,16 +9,12 @@ deployments {
     }
     spec {
       selector {
-        matchLabels {
-          ["app"] = module.app
-          ["env"] = module.env
-        }
+        matchLabels = label.matchModule(module)
       }
       template {
         metadata {
           labels {
-            ["app"] = module.app
-            ["env"] = module.env
+            ...label.matchModule(module)
           }
         }
       }

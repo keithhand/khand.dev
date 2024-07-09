@@ -1,12 +1,13 @@
 amends "template.pkl"
 
+import "label.pkl"
+
 ingresses {
   default {
     metadata {
       namespace = "khand-dev"
       labels {
-        ["app"] = module.app
-        ["env"] = module.env
+        ...label.matchModule(module)
       }
       annotations {
         ["cert-manager.io/cluster-issuer"] = "khand-dev"

@@ -1,19 +1,17 @@
 amends "template.pkl"
 
+import "label.pkl"
+
 services {
   default {
     metadata {
       namespace = "khand-dev"
       labels {
-        ["app"] = module.app
-        ["env"] = module.env
+        ...label.matchModule(module)
       }
     }
     spec {
-      selector {
-        ["app"] = module.app
-        ["env"] = module.env
-      }
+      selector = label.matchModule(module)
     }
   }
 }
