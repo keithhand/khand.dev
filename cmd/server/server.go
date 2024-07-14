@@ -16,7 +16,6 @@ import (
 
 func run(ctx context.Context, out *os.File, _ []string) error {
 	log := log.New(out)
-	// log.New(out)
 	cnfg := config.New(log)
 	json := json.New(log)
 
